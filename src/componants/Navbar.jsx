@@ -1,6 +1,6 @@
 
 // eslint-disable-next-line react/prop-types
-export default function Navbar({setCategory}) {
+export default function Navbar({ setCategory,setCountry }) {
     return (
         <>
             <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
@@ -12,19 +12,31 @@ export default function Navbar({setCategory}) {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <div className="nav-link" onClick={()=>setCategory("technology")}>Technology</div>
+                                <div className="nav-link" onClick={() => setCategory("technology")}>Technology</div>
                             </li>
                             <li className="nav-item">
-                                <div className="nav-link" onClick={()=>setCategory("business")}>Business</div>
+                                <div className="nav-link" onClick={() => setCategory("business")}>Business</div>
                             </li>
                             <li className="nav-item">
-                                <div className="nav-link" onClick={()=>setCategory("sports")}>Sports</div>
+                                <div className="nav-link" onClick={() => setCategory("sports")}>Sports</div>
                             </li>
                             <li className="nav-item">
-                                <div className="nav-link" onClick={()=>setCategory("entertainment")}>Intertainement</div>
+                                <div className="nav-link" onClick={() => setCategory("entertainment")}>Intertainement</div>
                             </li>
 
                         </ul>
+                        <div className="dropdown">
+                            <button className="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                   sort by country
+                            </button>
+                            <ul className="dropdown-menu">
+                                <li><div className="dropdown-item" onClick={()=>setCountry("us")}>America</div></li>
+                                <li><div className="dropdown-item" onClick={()=>setCountry("sa")}>South Africa</div></li>
+                                <li><div className="dropdown-item" onClick={()=>setCountry("jp")}>Japan</div></li>
+                                <li><div className="dropdown-item" onClick={()=>setCountry("ca")}>Canada</div></li>
+                                <li><div className="dropdown-item" onClick={()=>setCountry("au")}>Australia</div></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </nav>

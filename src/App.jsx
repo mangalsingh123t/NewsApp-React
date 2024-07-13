@@ -5,11 +5,12 @@ import NewsBourd from "./componants/NewsBourd"
 function App() {
 
   const [category, setCategory] = useState("general")
+  const [country,setCountry] = useState("in")
 
   return (
     <>
-      <Navbar setCategory={setCategory} />
-      <NewsBourd category={category} />
+      <Navbar setCategory={setCategory} setCountry={setCountry}/>
+      <NewsBourd category={category} country={country} />
     </>
   )
 }
