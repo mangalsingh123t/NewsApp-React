@@ -12,16 +12,16 @@ export default function Navbar({ setCategory,setCountry }) {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <div className="nav-link" onClick={() => setCategory("technology")}>Technology</div>
+                                <div className="nav-link cursor-pointer" onClick={() => setCategory("technology")}>Technology</div>
                             </li>
                             <li className="nav-item">
-                                <div className="nav-link" onClick={() => setCategory("business")}>Business</div>
+                                <div className="nav-link cursor-pointer" onClick={() => setCategory("business")}>Business</div>
                             </li>
                             <li className="nav-item">
-                                <div className="nav-link" onClick={() => setCategory("sports")}>Sports</div>
+                                <div className="nav-link cursor-pointer" onClick={() => setCategory("sports")}>Sports</div>
                             </li>
                             <li className="nav-item">
-                                <div className="nav-link" onClick={() => setCategory("entertainment")}>Intertainement</div>
+                                <div className="nav-link cursor-pointer" onClick={() => setCategory("entertainment")}>Intertainement</div>
                             </li>
 
                         </ul>
